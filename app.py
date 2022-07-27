@@ -23,6 +23,10 @@ def home():
     """Render website's home page."""
     return render_template('home.html')
 
+@app.route('/api')
+def hello_world_api():
+    return "Hello World"
+
 
 @app.route('/about/')
 def about():
