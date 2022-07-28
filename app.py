@@ -23,8 +23,8 @@ def hello_world_api():
     return "Hello World"
 
 @app.route('/api/hello_digvijay')
-def hello_world_api():
-    return "Hello World by digvjay"
+def hello_digvijay_api():
+    return "Hello World by digvijay"
 
 
 ###

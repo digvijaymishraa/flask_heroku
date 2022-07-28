@@ -12,8 +12,13 @@ class TestApp(unittest.TestCase):
         self.app = app.test_client()
 
     def test_api_hello_world(self):
-        rv = self.app.get('/api')
+        rv = self.app.get('/api/hello_world')
         self.assertEqual(rv.data, b'Hello World')
+        self.assertTrue(rv.status_code == 200)
+
+    def test_api_hello_digvijay(self):
+        rv = self.app.get('/api/hello_digvijay')
+        self.assertEqual(rv.data, b'Hello World by digvijay')
         self.assertTrue(rv.status_code == 200)
 
 
