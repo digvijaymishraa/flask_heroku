@@ -6,7 +6,7 @@ This file creates your application.
 """
 
 import os
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -25,6 +25,10 @@ def hello_world_api():
 @app.route('/api/hello_digvijay')
 def hello_digvijay_api():
     return "Hello World by digvijay"
+
+@app.route('/api/add/<num1>/<num2>')
+def add_api_add(num1, num2):
+    return str(int(num1) + int(num2))
 
 
 ###
