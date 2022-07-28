@@ -22,6 +22,9 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'this_should_be_configur
 def hello_world_api():
     return "Hello World"
 
+@app.route('/api/hello_digvijay')
+def hello_world_api():
+    return "Hello World by digvjay"
 
 
 ###
