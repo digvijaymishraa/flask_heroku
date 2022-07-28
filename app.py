@@ -28,7 +28,7 @@ def hello_digvijay_api():
 
 @app.route('/api/add/<num1>/<num2>')
 def add_api_add(num1, num2):
-    return str(int(num1) + int(num2))
+    return {"result": int(num1+num2)}
 
 
 ###
