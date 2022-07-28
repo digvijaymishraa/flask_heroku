@@ -6,7 +6,7 @@ This file creates your application.
 """
 
 import os
-from flask import Flask, request
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
@@ -28,7 +28,7 @@ def hello_digvijay_api():
 
 @app.route('/api/add/<num1>/<num2>')
 def add_api_add(num1, num2):
-    return {"result": int(num1+num2)}
+    return jsonify({"result": int(num1+num2)})
 
 
 ###
